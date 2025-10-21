@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Studio\\project\\my first C program\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94890FB9-B87F-448A-953F-F1AACE208C73}|my first C program\\my first C program.vcxproj|D:\\Visual Studio\\project\\my first C program\\my first C program\\part1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{94890FB9-B87F-448A-953F-F1AACE208C73}|my first C program\\my first C program.vcxproj|solutionrelative:my first C program\\part1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "part1.c",
+              "DocumentMoniker": "D:\\Visual Studio\\project\\my first C program\\my first C program\\part1.c",
+              "RelativeDocumentMoniker": "my first C program\\part1.c",
+              "ToolTip": "D:\\Visual Studio\\project\\my first C program\\my first C program\\part1.c",
+              "RelativeToolTip": "my first C program\\part1.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-07-23T05:23:25.014Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
