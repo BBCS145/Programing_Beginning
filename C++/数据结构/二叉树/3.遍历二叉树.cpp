@@ -12,7 +12,7 @@ struct tree
 };
 typedef tree* tnode;
 
-//´´½¨
+//åˆ›å»º
 tnode tree_create(tnode head)
 {
 	if (head == NULL)
@@ -66,7 +66,7 @@ tnode tree_create(tnode head)
 	return head;
 }
 
-//ÖĞĞò±éÀú(¿ÉÆğµ½ÅÅĞò¹¦ÄÜ)
+//ä¸­åºéå†(å¯èµ·åˆ°æ’åºåŠŸèƒ½)
 void get_datam(tnode head)
 {
 	if (head != NULL)
@@ -77,7 +77,7 @@ void get_datam(tnode head)
 	}
 }
 
-//Ç°ĞòÅÅÁĞ
+//å‰åºæ’åˆ—
 void get_dataf(tnode head)
 {
 	if (head != NULL)
@@ -88,7 +88,7 @@ void get_dataf(tnode head)
 	}
 }
 
-//ºóĞò±éÀú
+//ååºéå†
 void get_datab(tnode head)
 {
 	if (head != NULL)
