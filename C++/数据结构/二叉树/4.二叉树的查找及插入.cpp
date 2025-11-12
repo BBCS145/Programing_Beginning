@@ -12,7 +12,7 @@ struct tree
 };
 typedef tree* tnode;
 
-//´´½¨
+//åˆ›å»º
 tnode tree_create(tnode head)
 {
 	if (head == NULL)
@@ -66,7 +66,7 @@ tnode tree_create(tnode head)
 	return head;
 }
 
-//ÖĞĞò±éÀú(¿ÉÆğµ½ÅÅĞò¹¦ÄÜ)
+//ä¸­åºéå†(å¯èµ·åˆ°æ’åºåŠŸèƒ½)
 void get_datam(tnode head)
 {
 	if (head != NULL)
@@ -77,7 +77,7 @@ void get_datam(tnode head)
 	}
 }
 
-//Ç°ĞòÅÅÁĞ
+//å‰åºæ’åˆ—
 void get_dataf(tnode head)
 {
 	if (head != NULL)
@@ -88,7 +88,7 @@ void get_dataf(tnode head)
 	}
 }
 
-//ºóĞò±éÀú
+//ååºéå†
 void get_datab(tnode head)
 {
 	if (head != NULL)
@@ -99,7 +99,7 @@ void get_datab(tnode head)
 	}
 }
 
-//²éÕÒ
+//æŸ¥æ‰¾
 int tree_find(tnode head,int a)
 {
 	tnode temp = head;
@@ -115,11 +115,11 @@ int tree_find(tnode head,int a)
 	return 0;
 }
 
-//²åÈë
+//æ’å…¥
 tnode tree_insert(tnode head)
 {
 	int a;
-	cout << "²åÄÄ¸ö£¿" << endl;
+	cout << "æ’å“ªä¸ªï¼Ÿ" << endl;
 	cin >> a;
 	tnode temp = head;
 	if (tree_find(head, a) == 0)
@@ -159,103 +159,10 @@ tnode tree_insert(tnode head)
 	}
 	else
 	{
-		cout << "ÒÑ¾­ÓĞÁË" << endl;
+		cout << "å·²ç»æœ‰äº†" << endl;
 		return head;
 	}
 }
-
-//½ÚµãÉ¾³ı
-tnode tree_delete(tnode head,int a)
-{
-	if (tree_find(head, a) == 1)
-	{
-		tnode temp = new tree;
-		temp = head;
-		tnode temmie = new tree;
-		temmie = temp;
-		while (temp != NULL)
-		{
-			if (a < temp->num)
-			{
-				temmie = temp;
-				temp = temp->left;
-			}
-			else if (a > temp->num)
-			{
-				temmie = temp;
-				temp = temp->right;
-			}
-			else
-				break;
-		}
-		if (temp->left == NULL && temp->right == NULL)
-		{
-			if (temmie->num > temp->num)
-			{
-				temp = NULL;
-				temmie->left = NULL;
-			}
-			else
-			{
-				temp = NULL;
-				temmie->right = NULL;
-			}
-			return head;
-		}
-		else if (temp->left != NULL && temp->right != NULL)
-		{
-			temmie = temp;
-			temp = temp->right;
-			while (temp->left != NULL)
-				temp = temp->left;
-			int num = temp->num;
-			head = tree_delete(head, temp->num);
-			temmie->num = num;
-			return head;
-		}
-		else
-		{
-			tnode tem = new tree;
-			if (temp->left != NULL)
-			{
-				tem = temp->left;
-				if (temmie->num > temp->num)
-				{
-					temmie->left = NULL;
-					temmie->left = tem;
-				}
-				else
-				{
-					temmie->right = NULL;
-					temmie->right = tem;
-				}
-				return head;
-
-			}
-			else
-			{
-				tem = temp->right;
-				if (temmie->num > temp->num)
-				{
-					temmie->left = NULL;
-					temmie->left = tem;
-				}
-				else
-				{
-					temmie->right = NULL;
-					temmie->right = tem;
-				}
-				return head;
-			}
-		}
-	}
-	else
-	{
-		cout << "Ã»ÓĞÄãÉ¾É¶" << endl;
-		return head;
-	}
-}
-
 
 int main()
 {
@@ -268,17 +175,13 @@ int main()
 	get_datab(head);
 	cout << endl;
 	int a;
-	cout << "²éÄÄ¸ö£¿" << endl;
+	cout << "æŸ¥å“ªä¸ªï¼Ÿ" << endl;
 	cin >> a;
 	if (tree_find(head,a) == 1)
-		cout << "ÕÒµ½ÁË" << endl;
+		cout << "æ‰¾åˆ°äº†" << endl;
 	else
-		cout << "Ã»ÕÒµ½" << endl;
+		cout << "æ²¡æ‰¾åˆ°" << endl;
 	head = tree_insert(head);
-	get_datam(head);
-	cout << "ÊäÈëÒªÉ¾³ıµÄ½Úµã" << endl;
-	cin >> a;
-	tree_delete(head,a);
 	get_datam(head);
 	return 0;
 }
